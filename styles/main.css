@@ -1,0 +1,33 @@
+body {
+    background-image: linear-gradient(to left, aqua, blue);
+}
+.sidebar {
+    overflow-x: hidden;
+}
+.sidebar input {
+    display: block;
+}
+.header {
+    text-align: center;
+    margin-bottom: 8em;
+}
+.header h1 {
+    color: floralwhite;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    margin: auto;
+    justify-content: space-evenly;
+    max-width: 640px;
+    align-items: center;
+    justify-items: center;
+    row-gap: 20px;
+    font-size: 20px;
+}
+
+.sets {
+    grid-column: 1 / 4;
+
+}
