@@ -7,28 +7,68 @@
 </head>
 
 <body>
-<div class="sidebar" id="sidebar">
-    <label for="#hrs">hours
-        <input type="number" id="hrs">
-    </label>
-    <label for="#mn">minutes
-        <input type="number" id="mn">
-    </label>
-    <label for="#scnd">seconds
-        <input type="number" id="scnd">
-    </label>
-</div>
-<div class="header">
-        <h1>Interval Training Timer</h1>
+  <button class="sidebar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+  </button>
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>Settings</h2>
+      <button class="close-btn">
+        <span></span>
+        <span></span>
+      </button>
     </div>
-<div class="container">
-    <div class="sets">
-        sets
+    <div class="controlls">
+      <div class="control"><label for="sets">Sets: <span class="sets">1</span></label>
+      <input id="sets" type="range" name="sets" min="0" max="100" value="1" data-sizing="px"></div>
+      <div class="control"><label for="spacing">Seconds of Rest: <span class="rest">0</span></label>
+      <input id="spacing" type="range" name="rest" min="0" max="100" value="0" data-sizing="px"></div>
+      <div class="control"><label for="seconds">Seconds: <span class="scnds">0</span></label>
+      <input id="seconds" type="range" name="seconds" min="0" max="60" value="0" data-sizing="px"></div>
+      <div class="control"><label for="minutes">Minutes: <span class="mnts">1</span></label>
+      <input id="minutes" type="range" name="minutes" min="0" max="60" value="1" data-sizing="px"></div>
+      <div class="control"></div>
     </div>
-        <div class="hours"></div>
-        <div class="minutes"></div>
-        <div class="seconds"></div>
-    <script src="js/script.js"></script>
-</div>
+    <div class="button"><button class="start">Start</button></div>
+    
+    </aside>
+    <h1>Interval Training Timer</h1>
+    <div class="container">
+      <h2>Remaining Sets</h2>
+      <span id="value" class="currentSet">0</span>
+    </div>
+    <div class="counter_container">
+        <!-- days -->
+        <div class="count_down">
+            <div>
+                <h4 class="hours">0</h4>
+                <span>hours</span>
+            </div>
+        </div>
+        <!-- end of days -->
+        <!-- minutes -->
+        <div class="count_down">
+            <div>
+                <h4 class="minutes">0</h4>
+                <span>mins</span>
+            </div>
+        </div>
+        <!-- end of days -->
+        <!-- minutes -->
+        <div class="count_down">
+            <div>
+                <h4 class="seconds">0</h4>
+                <span>secs</span>
+            </div>
+        </div>
+        <!-- end of days -->
+    </div>
+    <div class="restSecs">
+      <h3>Rest</h3>
+      <h4 class="restSeconds">0</h4>
+    </div>
+    <script src="/js/script.js"></script>
 </body>
 </html>
